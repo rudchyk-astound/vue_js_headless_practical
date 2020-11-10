@@ -7,6 +7,30 @@
     "email": "s.rudchyk@astoundcommerce.com"
   },
   "private": true,
+  "license": "MIT",
+  "keywords": [
+    "nuxt",
+    "nuxt.js",
+    "nuxtjs",
+    "ssr",
+    "vue",
+    "vue server side",
+    "vue ssr",
+    "vue universal",
+    "vue versatile",
+    "vue.js",
+    "vuejs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rudchyk-astound/vue_js_headless_practical"
+  },
+  "homepage": "https://github.com/rudchyk-astound/vue_js_headless_practical#readme",
+  "pulls": "https://github.com/rudchyk-astound/vue_js_headless_practical/pulls",
+  "wiki": "https://github.com/rudchyk-astound/vue_js_headless_practical/wiki",
+  "bugs": {
+    "url": "https://github.com/rudchyk-astound/vue_js_headless_practical/issues"
+  },
   "scripts": {
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
@@ -57,5 +81,9 @@
     "stylelint-config-standard": "^20.0.0",
     "ts-jest": "^26.4.1",
     "vue-jest": "^3.0.4"
+  },
+  "engines": {
+    "node": ">=8.9.0",
+    "npm": ">=5.0.0"
   }
 }
