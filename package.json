@@ -52,10 +52,13 @@
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.0",
+    "@nuxtjs/composition-api": "^0.15.0",
     "bootstrap": "^4.5.2",
     "bootstrap-vue": "^2.17.3",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "node-sass": "^5.0.0",
+    "nuxt": "^2.14.6",
+    "sass-loader": "^10.0.5"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.6",
