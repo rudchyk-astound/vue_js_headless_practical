@@ -1,22 +1,28 @@
 <template>
   <b-container fluid>
     <div class="hello">{{ hello }}</div>
+    <div class="hello">products {{ products }}</div>
   </b-container>
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, ref, useFetch } from '@nuxtjs/composition-api'
+import getRequest from '~/utils/getRequest.ts'
 
 export default defineComponent({
-  setup(props, context) {
+  setup() {
+    const products: any = ref(null)
     const hello: string = 'Hello World!'
-    console.log(context.attrs)
-    console.log(context.slots)
-    console.log(context.emit)
+
+    useFetch(async () => {
+      products.value = await getRequest('/api/products')
+    })
+
     return {
-      hello
+      hello,
+      products,
     }
-  },
+  }
 })
 </script>
 
