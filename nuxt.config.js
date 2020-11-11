@@ -1,8 +1,9 @@
 export default {
-  mode: 'universal',
   server: {
-    port: 9393
+    port: 9393,
   },
+  // The serverMiddleware Property (https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-servermiddleware)
+  serverMiddleware: [{ path: '/api/products', handler: '~/api/products.js' }],
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: '%s',
@@ -13,10 +14,10 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: process.env.npm_package_description || '',
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   /*
