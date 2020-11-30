@@ -13,7 +13,7 @@ export default defineComponent({
   setup() {
     const title: String = 'Vue Js Practical Module In Frames Of Headless Course'
     return {
-      title
+      title,
     }
   },
 })

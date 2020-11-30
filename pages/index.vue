@@ -1,33 +1,34 @@
 <template>
-  <b-container fluid>
-    <div class="hello">{{ hello }}</div>
-    <div class="hello">products {{ products }}</div>
+  <b-container>
+    <b-card-group columns class="pt-5">
+      <ProductTile
+        v-for="product in products"
+        :key="product.sku"
+        :data="product"
+      />
+    </b-card-group>
   </b-container>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, useFetch } from '@nuxtjs/composition-api'
 import getRequest from '~/utils/getRequest.ts'
+import ProductTile from '~/components/ProductTile.vue'
 
 export default defineComponent({
+  components: {
+    ProductTile,
+  },
   setup() {
     const products: any = ref(null)
-    const hello: string = 'Hello World!'
 
     useFetch(async () => {
       products.value = await getRequest('/api/products')
     })
 
     return {
-      hello,
       products,
     }
-  }
+  },
 })
 </script>
-
-<style lang="scss">
-.hello {
-  font-size: 26px;
-}
-</style>
